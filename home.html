@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Oro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">O<span class="sub-logo">ro</span></div>
+       <div class="right-section">
+        <div class="user">Logged in as <span>dev@orocorp.in</span></div>
+        <div class="logout-button">Logout</div>
+       </div>
+    </div>
+    <!--Header section for small screen devices-->
+    <div class="header header-sm">
+        <div class="toggle-settings">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="logo">O<span class="sub-logo">ro</span></div>
+        <div class="toggle-side-panel">All Partners</div>
+    </div>
+    <div class="side-panel"></div>
+    <div class="settings-panel">
+        <div class="user">Logged in as <span>dev@orocorp.in</span></div>
+        <div class="logout-button">Logout</div>
+    </div>
+    <div class="side-panel-wrapper"></div>
+    <div class="detail-section">
+        <h4>PARTNER DETAILS</h4>
+        <div class="overview"></div>
+        <div id="map"></div>
+        <div class="locations"></div>
+    </div>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB94UvEoMWYPtL0nKxQkYiB-waz7AIwjIU&callback=initMap&libraries=&v=weekly"
+        async></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

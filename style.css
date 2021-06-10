@@ -1,0 +1,239 @@
+
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #F8F8F8;
+
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #D2D2D2;
+}
+.header .logo {
+    font-size: 24px;
+    line-height: 0;
+    font-weight: 700;
+    color: #F2BB2F;
+}
+.header .sub-logo {
+    font-size: 34px;
+    line-height: 0;
+    font-weight: 600;
+}
+.header .right-section {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+}
+.settings-panel .user {
+    background: white;
+    padding: 16px;
+    font-size: 13px;
+    color: #565656;
+}
+.settings-panel .user span {
+    display: block;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 700;
+    color: black;
+}
+.settings-panel .logout-button {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 16px 0 16px 0;
+    margin: 0 16px 0 16px;
+    color: #000000;
+    cursor: pointer;
+    border-bottom: 1px solid #D2D2D2;
+
+}
+.header .logout-button {
+    background: #CF2121;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 8px 25px 8px 25px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.header .toggle-side-panel {
+    background: #F2BB2F;
+    color: #000000;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px 4px 10px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.header .toggle-settings {
+    cursor: pointer;
+    width: 18px;
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .toggle-settings span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #000000;
+}
+.header-sm {
+    display: none;
+}
+#map {
+    height: 100%;
+    max-height: 600px;
+    min-height: 400px;
+    margin-top: 30px;
+}
+.side-panel {
+    min-width: 268px;
+    max-width: 268px;
+    height: 100vh;
+    border-right: 1px solid #D2D2D2;
+    background: #FFFFFF;
+}
+.side-panel .card {
+    padding: 23px 20px 24px 20px;
+    border-bottom: 1px solid #D2D2D2;
+}
+.side-panel .card.active {
+    background: #FDF7EA;
+}
+.side-panel .card:hover {
+    background: #FDF7EA;
+}
+.side-panel .card .partner-name {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: #000000;
+}
+.side-panel .card .meta-data {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #757575;
+}
+.side-panel .card .status {
+    font-size: 12px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+}
+.side-panel .card .status .circle, .status-span {
+   width: 8px;
+   height: 8px;
+   display: inline-flex;
+   border-radius: 50%;
+   margin-right: 7px;
+}
+
+.side-panel .card .status .circle[status="VISIT"], .status-span[status="VISIT"] {
+    background: #16A085;
+
+}
+.side-panel .card .status .circle[status="IDLE"], .status-span[status="IDLE"] {
+    background: #F0B859;
+}
+.side-panel .card .status .circle[status="INACTIVE"], .status-span[status="INACTIVE"] {
+    background: #CF2121;
+
+}
+.side-panel-wrapper, .settings-panel {
+    position: absolute;
+    left: -1000px;
+    z-index: -1;
+    width: 100%;
+}
+.detail-section {
+    width: 74%;
+    height: 100%;
+    padding: 0 40px 0px 40px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+.overview {
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border: 1px solid #D2D2D2;
+}
+.overview .cell {
+    padding: 20px 15px 20px 15px;
+    min-width: 155px;
+    font-size: 12px;
+    color: #4F4F4F;
+    position: relative;
+}
+.overview .cell .text-bold {
+    font-weight: 700;
+    margin-top: 5px;
+    font-size: 16px;
+}
+.overview .contact-number {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+.overview .contact-number .text-bold {
+    background: #F2BB2F;
+    color: #000000;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px 4px 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 85px;
+    text-align: center;
+}
+.locations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 100px;
+}
+.locations .card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 440px;
+    background-color: #FFFFFF;
+    border: 1px solid #D2D2D2;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 18px;
+    padding: 10px 20px 10px 20px;
+}
+.locations .card .cell {
+    color: #4F4F4F;
+}
+.locations .text-bold {
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+}
